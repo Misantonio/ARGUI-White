@@ -1,0 +1,386 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form</class>
+ <widget class="QWidget" name="Form">
+  <property name="enabled">
+   <bool>true</bool>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1000</width>
+    <height>480</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <widget class="QPushButton" name="btnStart">
+   <property name="geometry">
+    <rect>
+     <x>736</x>
+     <y>420</y>
+     <width>98</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Start</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btnStop">
+   <property name="geometry">
+    <rect>
+     <x>852</x>
+     <y>420</y>
+     <width>98</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Stop</string>
+   </property>
+  </widget>
+  <widget class="QGroupBox" name="groupBoxTrajectory">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>22</y>
+     <width>191</width>
+     <height>201</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>Trajectory</string>
+   </property>
+   <widget class="QWidget" name="formLayoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>27</y>
+      <width>160</width>
+      <height>175</height>
+     </rect>
+    </property>
+    <layout class="QFormLayout" name="formLayout">
+     <property name="fieldGrowthPolicy">
+      <enum>QFormLayout::AllNonFixedFieldsGrow</enum>
+     </property>
+     <property name="verticalSpacing">
+      <number>5</number>
+     </property>
+     <item row="0" column="0">
+      <widget class="QLabel" name="label_mx">
+       <property name="text">
+        <string>X:</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QLineEdit" name="lineEdit_mx"/>
+     </item>
+     <item row="1" column="0">
+      <widget class="QLabel" name="label_my">
+       <property name="text">
+        <string>Y:</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="1">
+      <widget class="QLineEdit" name="lineEdit_my"/>
+     </item>
+     <item row="2" column="0">
+      <widget class="QLabel" name="label_mz">
+       <property name="text">
+        <string>Z:</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="1">
+      <widget class="QLineEdit" name="lineEdit_mz"/>
+     </item>
+     <item row="4" column="1">
+      <widget class="Line" name="line">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+      </widget>
+     </item>
+     <item row="5" column="0">
+      <widget class="QLabel" name="label_4">
+       <property name="text">
+        <string>n:</string>
+       </property>
+      </widget>
+     </item>
+     <item row="5" column="1">
+      <widget class="QLineEdit" name="lineEdit_veces"/>
+     </item>
+     <item row="3" column="1">
+      <widget class="QLineEdit" name="lineEdit_myaw"/>
+     </item>
+     <item row="3" column="0">
+      <widget class="QLabel" name="label_mz_2">
+       <property name="text">
+        <string>Yaw:</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QGroupBox" name="groupBoxTest">
+   <property name="geometry">
+    <rect>
+     <x>250</x>
+     <y>22</y>
+     <width>121</width>
+     <height>111</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>Test</string>
+   </property>
+   <widget class="QWidget" name="verticalLayoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>20</y>
+      <width>111</width>
+      <height>80</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <property name="spacing">
+      <number>0</number>
+     </property>
+     <item>
+      <widget class="QRadioButton" name="radioButton_sim">
+       <property name="text">
+        <string>Simulation</string>
+       </property>
+       <property name="checked">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QRadioButton" name="radioButton_real">
+       <property name="text">
+        <string>Experiment</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QGroupBox" name="groupBoxFiles">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>250</y>
+     <width>551</width>
+     <height>251</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>Files</string>
+   </property>
+   <widget class="QWidget" name="gridLayoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>9</x>
+      <y>29</y>
+      <width>531</width>
+      <height>91</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="layout_files">
+     <property name="horizontalSpacing">
+      <number>4</number>
+     </property>
+     <item row="0" column="0">
+      <widget class="QLabel" name="label_2">
+       <property name="text">
+        <string>launch file:</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="2">
+      <widget class="QPushButton" name="btn_launch">
+       <property name="text">
+        <string>Open</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QLineEdit" name="lineEdit_launch"/>
+     </item>
+     <item row="1" column="2">
+      <widget class="QPushButton" name="btn_control">
+       <property name="text">
+        <string>Open</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="1">
+      <widget class="QLineEdit" name="lineEdit_control"/>
+     </item>
+     <item row="1" column="0">
+      <widget class="QLabel" name="label_3">
+       <property name="text">
+        <string>control file:</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QGroupBox" name="groupBoxTest_2">
+   <property name="geometry">
+    <rect>
+     <x>250</x>
+     <y>140</y>
+     <width>91</width>
+     <height>111</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>Results</string>
+   </property>
+   <widget class="QWidget" name="verticalLayoutWidget_2">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>20</y>
+      <width>71</width>
+      <height>80</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout_2">
+     <property name="spacing">
+      <number>0</number>
+     </property>
+     <item>
+      <widget class="QCheckBox" name="checkBox_save">
+       <property name="text">
+        <string>Save</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QCheckBox" name="checkBox_show">
+       <property name="text">
+        <string>Show</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QGroupBox" name="groupBox">
+   <property name="geometry">
+    <rect>
+     <x>420</x>
+     <y>20</y>
+     <width>201</width>
+     <height>91</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>Drone Info</string>
+   </property>
+   <widget class="QWidget" name="formLayoutWidget_2">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>29</y>
+      <width>181</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <layout class="QFormLayout" name="formLayout_2">
+     <property name="fieldGrowthPolicy">
+      <enum>QFormLayout::AllNonFixedFieldsGrow</enum>
+     </property>
+     <item row="0" column="0">
+      <widget class="QLabel" name="label_5">
+       <property name="text">
+        <string>Status</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QLabel" name="label_status">
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="0">
+      <widget class="QLabel" name="label_8">
+       <property name="text">
+        <string>Battery</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="1">
+      <widget class="QLabel" name="label_battery">
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QGroupBox" name="groupBox_console">
+   <property name="geometry">
+    <rect>
+     <x>620</x>
+     <y>250</y>
+     <width>341</width>
+     <height>121</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>Console Info</string>
+   </property>
+   <widget class="QLabel" name="label_console">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>30</y>
+      <width>331</width>
+      <height>81</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="lineWidth">
+     <number>2</number>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QPushButton" name="btnReset">
+   <property name="geometry">
+    <rect>
+     <x>620</x>
+     <y>420</y>
+     <width>98</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Reset</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
